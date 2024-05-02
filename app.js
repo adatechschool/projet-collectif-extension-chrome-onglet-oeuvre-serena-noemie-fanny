@@ -24,3 +24,27 @@
 let maDiv = document.getElementById('mainImage');
 
 maDiv.innerHTML="<img src=\"./images/photo"+ Math.floor((Math.random()*5)+1)+".jpg\"/>"
+
+function randomImg(){
+    let tabImg = new Array();
+    tabImg[0]  = "./images/photo1.jpg";
+    tabImg[1]  = "./images/photo2.jpg";
+    tabImg[2]  = "./images/photo3.jpg";
+    tabImg[3]  = "./images/photo4.jpg";
+    tabImg[4]  = "./images/photo5.jpg";
+  
+    let tabLegend = new Array();
+    tabLegend[0]  = "7. Alice Austen - The Darned Club, 1891 (Alice Austen Photograph Collection. Courtesy of the Staten Island Historical Society)";
+    tabLegend[1]  = "Description 2";
+    tabLegend[2]  = "Description 3";
+    tabLegend[3]  = "Description 4";
+    tabLegend[4]  = "Description 5";
+  
+  
+    let n = Math.round(Math.random()*4);
+  
+    document.getElementById('mainImage').src += tabImg[n];
+    document.getElementById('legend').innerHTML = tabLegend[n];
+
+}
+randomImg();
