@@ -21,54 +21,36 @@
 
 //imageRandom()
 
-let maDiv = document.getElementById('mainImage');
-
-maDiv.innerHTML="<img src=\"./images/photo"+ Math.floor((Math.random()*5)+1)+".jpg\"/>"
+//let maDiv = document.getElementById('mainImage');
 
 
-function randomImg(){
-    let tabImg = new Array();
-    tabImg[0]  = "./images/photo1.jpg";
-    tabImg[1]  = "./images/photo2.jpeg";
-    tabImg[2]  = "./images/photo3.jpg";
-    tabImg[3]  = "./images/photo4.jpeg";
-    tabImg[4]  = "./images/photo5.jpg";
-    tabImg[5]  = "./images/photo6.jpg";
-    tabImg[6]  = "./images/photo7.jpg";
-    tabImg[7]  = "./images/photo8.jpeg";
-    tabImg[8]  = "./images/photo9.jpg";
-    tabImg[9]  = "./images/photo10.jpg";
-    tabImg[10]  = "./images/photo11.jpg";
-    tabImg[11]  = "./images/photo12.jpg";
-    tabImg[12]  = "./images/photo13.jpg";
-    tabImg[13]  = "./images/photo14.jpg";
-    tabImg[14]  = "./images/photo15.jpg";
-    tabImg[15]  = "./images/photo16.jpeg";
+photoRandom= Math.floor((Math.random()*16)+1)
   
-    let tabLegend = new Array();
-    tabLegend[0]  = "Description 1";
-    tabLegend[1]  = "Description 2";
-    tabLegend[2]  = "Description 3";
-    tabLegend[3]  = "Description 4";
-    tabLegend[4]  = "Description 5";
-    tabLegend[5]  = "Description 6";
-    tabLegend[6]  = "Description 7";
-    tabLegend[7]  = "Description 8";
-    tabLegend[8]  = "Description 9";
-    tabLegend[9]  = "Description 10";
-    tabLegend[10]  = "Description 11";
-    tabLegend[11]  = "Description 12";
-    tabLegend[12]  = "Description 13";
-    tabLegend[13]  = "Description 14";
-    tabLegend[14]  = "Description 15";
-    tabLegend[15]  = "Description 16";
-   
-  
-  
-    let n = Math.round(Math.random()*15);
-  
-    document.getElementById('mainImage').src += tabImg[n];
-    document.getElementById('legend').innerHTML = tabLegend[n];
+let legendDictionnary = {
+    1 : "Imogen Cunningham - Two Callas, vers 1925 (Dulwich Picture Gallery, Londres, Royaume-Uni)",
+    2 : "Romina Ressia, Double Bubble Gum, 2014 (Hofa Gallery)",
+    3 : "Romina Ressia, Coke, 2014",
+    4 : "Louise Dahl, Model Mary Jane Russell, 1949 (Center for Creative Photography, Arizona Board of Regents)",
+    5 : "Annie Leibovitz, Christo, Central Park, New York City, 1981 (Art Institute Chicago)",
+    6 : "Alice Austen - Trude & I, Masked, Short Skirts, 1891 (Alice Austen Photograph Collection, Courtesy of the Staten Island Historical Society)",
+    7 : "Alice Austen - The Darned Club, 1891 (Alice Austen Photograph Collection. Courtesy of the Staten Island Historical Society)",
+    8 : "Alice Austen, Group Apparatus, 1893 (Trivium Art History)",
+    9 : "Anna Atkins, Polypodium crenatum, Norvège, 1854. Cyanotype, 32.9 x 23.6 cm (Musée des beaux-arts du Canada)",
+    10 : "Anna Atkins, Hyminophyllum Sunbridgense, vers 1850, cyanotype, 20,5 x 11,8 cm (Musée d’Orsay)",
+    11 : "Gertrud Arndt, Autoportrait dans l’atelier, 1926 (Bauhaus Archiv Berlin)",
+    12 : "Marta Astfalck-Vietz, Danse expérimentale, 1931 (Landesmuseum für Moderne Kunst, Fotografie und Architektur)",
+    13 : "Romina Ressia, Fisheye, 2014 ",
+    14 : "Romina Ressia, Popcorn, 2014 (Columbus Museum of Art, USA)",
+    15 : "Trude Fleischmann, The dancer Tilly Losch, Vienna, 1922-25",
+    16 : "Lise Sarfati, Dierdre # 20, Oakland, Califonia, 2005  (Lise Sarfati / Magnum Photos)",
+    17 : "Trude Fleischmann, The dancer Tilly Losch, Vienna, 1922-25",
+    18 : "Shirin Neshat, Speechless, from the series Women of Allah, 1996 (Shirin Neshat, courtesy Gladstone Gallery, New York and Brussels)"
 
+    //maDiv.innerHTML="<img src=\"./images/photo"+ Math.floor((Math.random()*15)+1)+".jpg\"/>"
 }
-randomImg();
+
+document.getElementById('mainImage').innerHTML += "<img src=\"./images/photo"+ photoRandom+".jpg\"/>"
+
+document.getElementById('legend').innerHTML += legendDictionnary[photoRandom]
+
+//randomImg();
