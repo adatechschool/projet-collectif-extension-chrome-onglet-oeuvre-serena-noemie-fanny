@@ -1,0 +1,33 @@
+:root{
+    --bg-color: #D2D7DE;
+    --second-bg-color: #8E949F;
+    --text-color: #06BDAD;
+    --main-color: #D0CDDB;
+}
+body {
+    background: var(--bg-color) ;
+    color: var(--text --second-bg-color);
+    line-height: 1;
+}
+#mainImage img {
+    height: 30%;
+    width: 30%;
+    display: block;
+    margin: auto;
+    align-items: center;
+    border-radius: 15px; /* Rayon de 10 pixels pour les coins */
+    /* background-color: #E4EFFF; Couleur de fond pour illustrer l'arrondi */
+    padding: 5px;
+}
+#legend
+{
+    text-align: center;
+}
+ html body {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+ }
