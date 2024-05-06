@@ -1,28 +1,3 @@
-//let images = ["/Users/fanny/Documents/ADA/projet-collectif-extension-chrome-onglet-oeuvre-serena-noemie-fanny/images/photo1.jpg","/Users/fanny/Documents/ADA/projet-collectif-extension-chrome-onglet-oeuvre-serena-noemie-fanny/images/photo2.jpg","photo3.jpg","photo4.jpg","photo5.jpg"];
-
-// const randomImage = document.createElement("images") + images[Math.floor(Math.random() * images.length)];
-
-// const image = document.createElement("img");
-// image.src = "./images/EllenvonUnwerth.jpg";
-// document.body.appendChild(image);
-
-// function imageRandom(){
-   
-//     let maDiv = document.getElementById('mainImage');
-//     let monImage = document.createElement('img');
-//     monImage.src = images;
-
-//     for (let i = 0; i < images.length; i++) {
-//         document.createElement(images[i]);
-
-//     maDiv.appendChild(monImage)
-//     }
-// }
-
-//imageRandom()
-
-//let maDiv = document.getElementById('mainImage');
-
 
 photoRandom= Math.floor((Math.random()*16)+1)
   
@@ -41,15 +16,20 @@ let legendDictionnary = {
     12 : ["Marta Astfalck-Vietz", " Danse expérimentale", " 1931 (Landesmuseum für Moderne Kunst, Fotografie und Architektur)"],
     13 : ["Romina Ressia", " Fisheye", " 2014"],
     14 : ["Dora Maar (Henriette Théodora Markovitch, dite)", " Sans titre (Main-coquillage)", " 1934 (Centre Pompidou)"],
-    15 : ["Trude Fleischmann ", " The dancer Tilly Losch", " Vienna, 1922-25"],
+    15 : ["Trude Fleischmann, ", " The dancer Tilly Losch", " Vienna, 1922-25"],
     16 : ["Sophie Calle", " Les Dormeurs", " 1979 (Courtesy Perrotin)"],
     17 : ["Shirin Neshat", " Speechless, from the series Women of Allah", " 1996 (Shirin Neshat, courtesy Gladstone Gallery, New York and Brussels)"]
 
-    //maDiv.innerHTML="<img src=\"./images/photo"+ Math.floor((Math.random()*15)+1)+".jpg\"/>"
 }
+document.getElementById('icones').innerHTML += "<img src=\"./icons/frida2.svg\"/>"
 
 document.getElementById('mainImage').innerHTML += "<img src=\"./images/photo"+ photoRandom+".jpg\"/>"
 
 document.getElementById('legend').innerHTML += legendDictionnary[photoRandom]
 
-//randomImg();
+// document.getElementById('legend1').innerHTML += legendDictionnary[photoRandom][0]
+
+// document.getElementById('legend').innerHTML += legendDictionnary[photoRandom][1]
+
+// document.getElementById('legend2').innerHTML += legendDictionnary[photoRandom][2]
+

@@ -4,39 +4,51 @@
     --text-color: #06BDAD;
     --main-color: #D0CDDB;
 }
+
+body {
+    background: var(--bg-color) ;
+    line-height: 1;
+}
+
+header {
+    height:110px;
+    width:100%;
+    margin-top: px;
+}
+
 #icones{
     position:absolute;
     top: 10px;
     right:10px;
     z-index:2;
-    /* float:right; */
-    /* margin-left: 10%; */ */
+    height:110px;
+    width:110px;
+}
 
-}
-body {
-    background: var(--bg-color) ;
-    color: var(--text --second-bg-color);
-    line-height: 1;
-}
-#mainImage img {
-   height: 30%;
-    width: 30%;
-    display: block;
-    /* margin:auto; */
+#mainImage {
+    top: 100px;
+    display: flex;
     align-items: center;
-    border-radius: 15px; /* Rayon de 10 pixels pour les coins */
+    height: 300px;
+    justify-content: center;
+}
+
+#mainImage img {
+    display: flex;
+    align-items: center;
+    height: 400px;
+    width: auto;
+    border-radius: 15px; /* Rayon de 10 pixels pour les coins
     /* background-color: #E4EFFF; Couleur de fond pour illustrer l'arrondi */
-    padding: 15px;
+    padding: 7px;
 }
-#legend
-{
+
+#legend{
+    position:relative;
     text-align: left;
+    margin-top:100px;
+    margin-left: 25px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: italic;
 }
- html body {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
- }
