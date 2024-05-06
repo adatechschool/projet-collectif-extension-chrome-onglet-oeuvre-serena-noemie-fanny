@@ -1,8 +1,17 @@
 :root{
-    --bg-color: #D2D7DE;
+    --bg-color: #E1DCCF;
     --second-bg-color: #8E949F;
     --text-color: #06BDAD;
     --main-color: #D0CDDB;
+}
+#icones{
+    position:absolute;
+    top: 10px;
+    right:10px;
+    z-index:2;
+    /* float:right; */
+    /* margin-left: 10%; */ */
+
 }
 body {
     background: var(--bg-color) ;
@@ -10,18 +19,18 @@ body {
     line-height: 1;
 }
 #mainImage img {
-    height: 30%;
+   height: 30%;
     width: 30%;
     display: block;
-    margin: auto;
+    /* margin:auto; */
     align-items: center;
     border-radius: 15px; /* Rayon de 10 pixels pour les coins */
     /* background-color: #E4EFFF; Couleur de fond pour illustrer l'arrondi */
-    padding: 5px;
+    padding: 15px;
 }
 #legend
 {
-    text-align: center;
+    text-align: left;
 }
  html body {
     margin: 0;
