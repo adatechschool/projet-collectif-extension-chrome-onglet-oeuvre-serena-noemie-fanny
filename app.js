@@ -18,8 +18,11 @@ let legendDictionnary = {
     14 : ["Dora Maar (Henriette Théodora Markovitch, dite)", " Sans titre (Main-coquillage)", " 1934 (Centre Pompidou)"],
     15 : ["Trude Fleischmann, ", " The dancer Tilly Losch", " Vienna, 1922-25"],
     16 : ["Sophie Calle", " Les Dormeurs", " 1979 (Courtesy Perrotin)"],
-    17 : ["Shirin Neshat", " Speechless, from the series Women of Allah", " 1996 (Shirin Neshat, courtesy Gladstone Gallery, New York and Brussels)"]
-
+    17 : ["Shirin Neshat", " Speechless, from the series Women of Allah", " 1996 (Shirin Neshat, courtesy Gladstone Gallery, New York and Brussels)"],
+    18 : ["Berenice Abbott", " Grand Central Station New York City", " 1929 (Moma, New-York)"],
+    19 : ["Berenice Abbott", " Canyon: Broadway and Exchange Place, Manhattan", " 1936 (Moma, New-York)"],
+    20 : ["Ninagawa Mika", " « Untitled »from the series Utsurundesu", " 2018-19 (Ninagawa Mika)"],
+    21 : ["Hiromix", " Seventeen Girl Days", " 1995 (Abe Books)"],
 }
 document.getElementById('icones').innerHTML += "<img src=\"./icons/frida2.svg\"/>"
 
