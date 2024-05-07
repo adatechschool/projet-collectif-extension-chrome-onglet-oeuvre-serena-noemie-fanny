@@ -20,6 +20,73 @@ header {
     right:10px; /* permet de positionner l'icone à droite*/
     width: 10%;
 }
+.clock {
+    top:28px;
+    border-radius: 100%;
+    background: #E1DCCF url(./images/ios_clock.svg) no-repeat center;
+    background-size: 55%;
+    padding-bottom: 6%;
+    position: relative;
+    width: 10em;
+  }
+
+   
+  .minutes-container, .hours-container, .seconds-container {
+    display:flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .hours {
+    background: #000;
+    height: 20%;
+    left: 48.75%;
+    position: absolute;
+    top: 30%;
+    transform-origin: 50% 100%;
+    width: 2.5%;
+  }
+  .minutes {
+    background: #000;
+    height: 40%;
+    left: 49%;
+    position: absolute;
+    top: 10%;
+    transform-origin: 50% 100%;
+    width: 2%;
+  }
+
+  .seconds {
+    background: #000;
+    height: 45%;
+    left: 49.5%;
+    position: absolute;
+    top: 14%;
+    transform-origin: 50% 80%;
+    width: 1%;
+    z-index: 8;
+  }
+
+  @keyframes rotate {
+    100% {
+      transform: rotateZ(360deg);
+    }
+  }
+
+  .hours-container {
+    animation: rotate 43200s infinite linear;
+  }
+  .minutes-container {
+    animation: rotate 3600s infinite steps(60);
+    transition: transform 0.3s cubic-bezier(.4,2.08,.55,.44);
+  }
+  .seconds-container {
+    animation: rotate 60s infinite steps(60);
+    transition: transform 0.2s cubic-bezier(.4,2.08,.55,.44);
+  }
 
 #mainImage {
     display: flex;
@@ -29,16 +96,13 @@ header {
 }
 
 #mainImage img {
-    /* height: 500px; You must set a specified height */
-    border-radius: 15px; /* Rayon de 10 pixels pour les coins*/
-    object-fit: contain;
-
+    border-radius: 15px; /* Rayon de 10 pixels pour les coins*/ 
+    object-fit:contain; 
 }
 
 .box{
-    object-position: left bottom;
     justify-content: none;
-    margin-top: 10vh;
+    margin-top: 2%;
     line-height: 1.5em;
 }
 
