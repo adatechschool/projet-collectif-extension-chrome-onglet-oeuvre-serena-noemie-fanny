@@ -43,6 +43,15 @@ header {
     padding: 7px;
 }
 
+.box{
+    display: flex;
+    width: auto;
+    justify-content: none;
+}
+.box :second-child{
+    align-items: left;
+}
+
 #legend{
     position:relative;
     text-align: left;
@@ -50,5 +59,13 @@ header {
     margin-left: 25px;
     font-family: "Poppins", sans-serif;
     font-weight: 700;
+    font-style: italic;
+}
+#legend1{
+    position:relative;
+    text-align: left;
+    margin-top:100px;
+    margin-left: 25px;
+    font-family: "Poppins", sans-serif;
     font-style: italic;
 }

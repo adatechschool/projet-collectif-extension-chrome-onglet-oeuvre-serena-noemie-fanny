@@ -16,7 +16,7 @@ let legendDictionnary = {
     12 : ["Marta Astfalck-Vietz", " Danse expérimentale", " 1931 (Landesmuseum für Moderne Kunst, Fotografie und Architektur)"],
     13 : ["Romina Ressia", " Fisheye", " 2014"],
     14 : ["Dora Maar (Henriette Théodora Markovitch, dite)", " Sans titre (Main-coquillage)", " 1934 (Centre Pompidou)"],
-    15 : ["Trude Fleischmann, ", " The dancer Tilly Losch", " Vienna, 1922-25"],
+    15 : ["Trude Fleischmann ", " The dancer Tilly Losch", " Vienna, 1922-25"],
     16 : ["Sophie Calle", " Les Dormeurs", " 1979 (Courtesy Perrotin)"],
     17 : ["Shirin Neshat", " Speechless, from the series Women of Allah", " 1996 (Shirin Neshat, courtesy Gladstone Gallery, New York and Brussels)"]
 
@@ -25,11 +25,11 @@ document.getElementById('icones').innerHTML += "<img src=\"./icons/frida2.svg\"/
 
 document.getElementById('mainImage').innerHTML += "<img src=\"./images/photo"+ photoRandom+".jpg\"/>"
 
-document.getElementById('legend').innerHTML += legendDictionnary[photoRandom]
+// document.getElementById('legend').innerHTML += legendDictionnary[photoRandom]
 
-// document.getElementById('legend1').innerHTML += legendDictionnary[photoRandom][0]
+document.getElementById('legend1').innerHTML += legendDictionnary[photoRandom][0]
 
-// document.getElementById('legend').innerHTML += legendDictionnary[photoRandom][1]
+document.getElementById('legend').innerHTML += legendDictionnary[photoRandom][1]
 
-// document.getElementById('legend2').innerHTML += legendDictionnary[photoRandom][2]
+document.getElementById('legend1').innerHTML += legendDictionnary[photoRandom][2]
 
