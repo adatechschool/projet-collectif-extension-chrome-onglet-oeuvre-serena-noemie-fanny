@@ -16,27 +16,29 @@ header {
 }
 
 #icones{
-    position:absolute;
+    position: absolute;
     right:10px; /* permet de positionner l'icone à droite*/
     width: 10%;
 }
 
 #mainImage {
     display: flex;
-    height: 25%;
+    height: 80vh;
     width:auto;
-    justify-content: center; 
+    justify-content: center;
 }
 
 #mainImage img {
-    height: 500px; /*You must set a specified height */
-    background-size: cover; /*Resize the background image to cover the entire container */
-    border-radius: 15px; /* Rayon de 10 pixels pour les coins*/  
+    /* height: 500px; You must set a specified height */
+    border-radius: 15px; /* Rayon de 10 pixels pour les coins*/
+    object-fit: contain;
+
 }
 
 .box{
+    object-position: left bottom;
     justify-content: none;
-    margin-top: 1%;
+    margin-top: 10vh;
     line-height: 1.5em;
 }
 
