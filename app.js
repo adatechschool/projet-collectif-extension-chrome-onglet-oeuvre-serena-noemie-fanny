@@ -28,8 +28,6 @@ document.getElementById('icones').innerHTML += "<img src=\"./icons/frida2.svg\"/
 
 document.getElementById('mainImage').innerHTML += "<img src=\"./images/photo"+ photoRandom+".jpg\"/>"
 
-// document.getElementById('legend').innerHTML += legendDictionnary[photoRandom]
-
 document.getElementById('legend1').innerHTML += legendDictionnary[photoRandom][0]
 
 document.getElementById('legend').innerHTML += legendDictionnary[photoRandom][1]
