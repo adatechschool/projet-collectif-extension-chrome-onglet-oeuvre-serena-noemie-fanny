@@ -1,5 +1,5 @@
 
-photoRandom= Math.floor((Math.random()*16)+1)
+photoRandom= Math.floor((Math.random()*21)+1)
   
 let legendDictionnary = {
     1 : ["Imogen Cunningham", " Two Callas", " vers 1925 (Dulwich Picture Gallery, Londres, Royaume-Uni)"],
