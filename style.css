@@ -21,17 +21,17 @@ header {
     width: 10%;
 }
 .clock {
-    top:28px;
+    top:28px; /*Permet de décaler vers le bas l'horloge */
     border-radius: 100%;
-    background: #E1DCCF url(./images/ios_clock.svg) no-repeat center;
-    background-size: 55%;
-    padding-bottom: 6%;
+    background: #E1DCCF url(./images/ios_clock.svg) no-repeat center; /*Permet de faire apparaître l'image et de colorer le fond de l'horloge avec la même couleur que notre background dans le body. */
+    background-size: 55%; /*Donne la taille de l'image par rapport à l'écran */
+    padding-bottom: 6%; /*Permet d'ajuster la taille de l'horloge, définit la zone de remplissage entre la bordure de l'élément article et son contenu */
     position: relative;
-    width: 10em;
+    width: 10em; /*Donne la largeur de l'image */
   }
 
    
-  .minutes-container, .hours-container, .seconds-container {
+   .minutes-container, .hours-container, .seconds-container { /*Permet de positionner les container dans lesquelles on positionnera les aiguilles. */
     display:flex;
     position: absolute;
     top: 0;
@@ -41,16 +41,16 @@ header {
   }
 
   .hours {
-    background: #000;
-    height: 20%;
-    left: 48.75%;
+    background: #000; /*couleur de l'aiguille heure */
+    height: 20%; /* hauteur de l'aiguille (plus petite que celle des minutes et secondes ) */
+    left: 48.75%; /*l'usage du pourcentage permet à l'horloge d'être responsive */
     position: absolute;
     top: 30%;
     transform-origin: 50% 100%;
-    width: 2.5%;
+    width: 2.5%; /* donne l'épaisseur de l'aiguille */
   }
   .minutes {
-    background: #000;
+    background: #000; /* couleur de l'aiguille minute */
     height: 40%;
     left: 49%;
     position: absolute;
@@ -60,32 +60,32 @@ header {
   }
 
   .seconds {
-    background: #000;
+     background: #000; /*couleur de l'aiguille seconde */
     height: 45%;
     left: 49.5%;
     position: absolute;
     top: 14%;
-    transform-origin: 50% 80%;
+    transform-origin: 50% 80%;/*Permet d'avoir un bout d'aiguille qui depasse au milieu */
     width: 1%;
     z-index: 8;
   }
 
-  @keyframes rotate {
+   @keyframes rotate { /*demande aux aiguilles de se deplacer, en donnant le type de mouvement */
     100% {
       transform: rotateZ(360deg);
     }
   }
 
   .hours-container {
-    animation: rotate 43200s infinite linear;
+    animation: rotate 43200s infinite linear; /* se deplace tous les 43200s, donne le rythme */
   }
   .minutes-container {
     animation: rotate 3600s infinite steps(60);
-    transition: transform 0.3s cubic-bezier(.4,2.08,.55,.44);
+   transition: transform 0.3s cubic-bezier(.4,2.08,.55,.44); /* donne un mouvement saccade à l'aiguille des minutes */
   }
   .seconds-container {
     animation: rotate 60s infinite steps(60);
-    transition: transform 0.2s cubic-bezier(.4,2.08,.55,.44);
+    transition: transform 0.2s cubic-bezier(.4,2.08,.55,.44);/* donne un mouvement saccade à l'aiguille des secondes */
   }
 
 #mainImage {

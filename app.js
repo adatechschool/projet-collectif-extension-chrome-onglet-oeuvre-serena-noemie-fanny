@@ -43,13 +43,13 @@ document.getElementById('legend1').innerHTML += legendDictionnary[photoRandom][0
 document.getElementById('legend').innerHTML += legendDictionnary[photoRandom][1]
 
 function initHeureLocale(){
-    var date = new Date;
-    var seconds = date.getSeconds();
-    var minutes = date.getMinutes();
-    var hours = date.getHours();
+    let date = new Date;
+    let seconds = date.getSeconds();
+    let minutes = date.getMinutes();
+    let hours = date.getHours();
   
-    // Create an object with each hand and it's angle in degrees
-    var hands = [
+    // Creation d'un objet aiguilles dans lequelle on indique chaque type d'aiguille avec l'angle associé
+    let hands = [
       {
         hand: 'hours',
         angle: (hours * 30) + (minutes / 2)
@@ -63,16 +63,16 @@ function initHeureLocale(){
         angle: (seconds * 6)
       }
     ];
-    // Loop through each of these hands to set their angle
-    for (var j = 0; j < hands.length; j++) {
-      var elements = document.querySelectorAll('.' + hands[j].hand);
-      for (var k = 0; k < elements.length; k++) {
-          elements[k].style.webkitTransform = 'rotateZ('+ hands[j].angle +'deg)';
-          elements[k].style.transform = 'rotateZ('+ hands[j].angle +'deg)';
+    // boucle qui parcourt l'objet aiguilles et chaque indice de l'objet est stocké dans la variable élément et lié à un sélecteur CSS .heures, .minutes ou .secondes
+    for (let j = 0; j < hands.length; j++) {
+      let elements = document.querySelectorAll('.' + hands[j].hand);
+      for (var k = 0; k < elements.length; k++) { // dans l'objet élément, on parcours chaque indice et on lui applique le calcul de l'angle de l'objet hand
+          elements[k].style.webkitTransform = 'rotateZ('+ hands[j].angle +'deg)';//code pour Safari pour chaque valeur de élément on applique la propriété css style.transform et rotate  selon l'angle indiqué dans l'objet. 
+          elements[k].style.transform = 'rotateZ('+ hands[j].angle +'deg)';// code pour tous les autres navigateurs.
           // If this is a minute hand, note the seconds position (to calculate minute position later)
           if (hands[j].hand === 'minutes') {
             elements[k].parentNode.setAttribute('data-second-angle', hands[j + 1].angle);
-          }
+          }// s'il s'agit d'une minute, alors il ira chercher l'angle des secondes de l'objet hands.
       }
     }
   }
@@ -80,52 +80,5 @@ initHeureLocale();
 
 // permet de convertir l'heure dans l'angle des aiguilles correspondants. Elle fait une boucle sur chaque aiguille lui donne le bon angle par les proprietes style.transform et rotateZ
 
-function setUpMinuteHands() {
-    // Find out how far into the minute we are
-    var containers = document.querySelectorAll('.minutes-container');
-    var secondAngle = containers[0].getAttribute("data-second-angle");
-    if (secondAngle > 0) {
-      // Set a timeout until the end of the current minute, to move the hand
-      var delay = (((360 - secondAngle) / 6) + 0.1) * 1000;
-      setTimeout(function() {
-        moveMinuteHands(containers);
-      }, delay);
-    }
-  }
-  setUpMinuteHands();
-function moveMinuteHands(containers) {
-    for (var i = 0; i < containers.length; i++) {
-      containers[i].style.webkitTransform = 'rotateZ(6deg)';
-      containers[i].style.transform = 'rotateZ(6deg)';
-    }
-    // Then continue with a 60 second interval
-    setInterval(function() {
-      for (var i = 0; i < containers.length; i++) {
-        if (containers[i].angle === undefined) {
-          containers[i].angle = 12;
-        } else {
-          containers[i].angle += 6;
-        }
-        containers[i].style.webkitTransform = 'rotateZ('+ containers[i].angle +'deg)';
-        containers[i].style.transform = 'rotateZ('+ containers[i].angle +'deg)';
-      }
-    }, 60000);
-  }
-  moveMinuteHands();
 
-  function moveSecondHands() {
-    var containers = document.querySelectorAll('.seconds-container');
-    setInterval(function() {
-      for (var i = 0; i < containers.length; i++) {
-        if (containers[i].angle === undefined) {
-          containers[i].angle = 6;
-        } else {
-          containers[i].angle += 6;
-        }
-        containers[i].style.webkitTransform = 'rotateZ('+ containers[i].angle +'deg)';
-        containers[i].style.transform = 'rotateZ('+ containers[i].angle +'deg)';
-      }
-    }, 1000);
-  }
-  moveSecondHands()
   
